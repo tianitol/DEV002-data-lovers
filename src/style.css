@@ -1,25 +1,34 @@
-/* {
-    margin: 0;
-    padding: 0;
+
+*{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    background-color: #fcfbfb;
-}*/
 
-/*body {
-    background-color: #fcfbfb;
-}*/
+}
 
-/*header {
-    display: flex;
-    position: absolute;
-    font-size: large;
-    padding: 50px;
-    justify-content: center;
-    margin-top: 0;
-    padding-top: 0;
+/* HEADER */
+
+.banner{
     width: 100%;
+    height: 150px;
+    display: block;
+    background-color: #134573;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    
 
-}*/
+}
+
+.imgBanner{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    max-width: 700px;
+    min-width: 400px;
+}
+/* AQUI TERMINA EL HEADER */
 
 h1 {
     font-family: 'Inter', sans-serif;
@@ -28,35 +37,53 @@ h1 {
 
 .conteiner {
     width: 100%;
-    height: 100%;
+    height: 50%;
+    margin-top: 155px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fcfbfb;
-    padding: 0 1.5rem;
-    /*scroll-behavior: smooth;*/
+    flex-direction: column;
 
 }
 
-/*.infoFilms{
-    width: 100%;
-    height: 100%;
+.menuBar{
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#fcfbfb;
-    padding: 0 1.5rem;
-}*/
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 150px;
+}
+
+.desplegables{
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    min-width: 400px;
+    display:block;
+    margin: auto;
+    justify-content: space-between;
+}
+
+
 
 .cajaFilms {
     width: 100%;
     height: 100%;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fcfbfb;
     padding: 0 1.0rem;
+    padding-top: 10%;
     scroll-behavior: smooth;
+        
 }
 
 .carta {
@@ -71,6 +98,7 @@ h1 {
     display: flex;
     align-items: center;
     border-radius: 2rem;
+    
 }
 
 
@@ -134,6 +162,18 @@ img {
     margin: .5rem 0 1rem;
 
 }
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 150px;
+    display: block;
+    background-color: #134573;
+    position: fixed;
+    z-index: index 2;
+    bottom: 0;
+}
+/* AQUI TERMINA EL FOOTER */
 
 /*@media screen and (max-width: 1068px){
     .cajaFilms{
