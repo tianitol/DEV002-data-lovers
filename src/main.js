@@ -30,3 +30,5 @@ const displayCard = (dataGhibli) => {
 displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
 
 console.log(peliculas);
+
+export { displayCard }
