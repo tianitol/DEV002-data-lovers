@@ -11,7 +11,7 @@ let containerGhibli = document.getElementById("root");
 
 //peliculas.forEach( films => console.log(films) )
 // crear una constante para guardar 
-const displayCard = (dataGhibli) => {
+export const displayCard = (dataGhibli) => {
     dataGhibli.forEach((films) => {
         let cardFilms = document.createElement("div");
         cardFilms.classList.add("carta");
@@ -31,4 +31,3 @@ displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le pa
 
 console.log(peliculas);
 
-export { displayCard }
