@@ -29,6 +29,15 @@ const displayCard = (dataGhibli) => {
 
 displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
 
-console.log(peliculas);
+console.log(displayCard);
 
 export { displayCard }
+
+
+
+/* EJEMPLO DE FILTER
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);*/
