@@ -58,6 +58,7 @@ h1 {
     height: 60px;
     position: fixed;
     top: 150px;
+    z-index: 2;
 }
 
 .desplegables{
@@ -98,6 +99,7 @@ h1 {
     display: flex;
     align-items: center;
     border-radius: 2rem;
+    height: ;
     
 }
 
