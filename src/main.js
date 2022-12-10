@@ -1,7 +1,7 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
+//import { ordenarData } from './data.js';
+
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+
 
 //console.log(example, data);
 //console.log(data.films[0].poster)
@@ -9,7 +9,6 @@ import data from './data/ghibli/ghibli.js';
 let peliculas = data.films;
 let containerGhibli = document.getElementById("root");
 
-//peliculas.forEach( films => console.log(films) )
 // crear una constante para guardar 
 const displayCard = (dataGhibli) => {
     dataGhibli.forEach((films) => {
@@ -27,17 +26,24 @@ const displayCard = (dataGhibli) => {
     })
 }
 
-displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
+//displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
 
-console.log(displayCard);
-
-export { displayCard }
+console.log(peliculas);
 
 
+//orden descendente
 
-/* EJEMPLO DE FILTER
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+let ordenarDataDes = peliculas.sort((a, b) => b.release_date - a.release_date);
+console.log(ordenarDataDes);
 
-const result = words.filter(word => word.length > 6);
+let ordenarDataAs = peliculas.sort((a, b) => a.release_date - b.release_date);
 
-console.log(result);*/
+console.log(ordenarDataDes);
+
+displayCard(ordenarDataAs);
+
+
+
+//document.addEventListener("orderAño")
+
+// export { displayCard }
