@@ -22,9 +22,10 @@
 
 /* HEADER */
 .banner{
+
     width: 100%;
-    height: 150px;
-    display: block;
+    height: 9rem;
+    display: flex;
     background-color: #134573;
     position: fixed;
     z-index: 2;
@@ -64,6 +65,9 @@
    
 
 }
+
+/* AQUI COMIENZA LA BARRA DE MENUS DESPLEGABLES */
+
 .menuBar{
     padding: 0;
     display: flex;
@@ -71,21 +75,81 @@
     justify-content: center;
     background-color: #d9d9d9;
     width: 100%;
-    height: 60px;
+    height: 3rem;
     position: fixed;
-    top: 150px;
+    top: 9rem;
     z-index: 2;
+    max-width: 100%;
+    min-width: 400px;
+    font-size: 1.15rem;
 }
 
 .desplegables{
     width: 100%;
     height: 100%;
-    max-width: 800px;
+    max-width: 100%;
     min-width: 400px;
     display:block;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+ul, ol {
+    list-style: none;
+    width: 50%;
+    text-align: center;
+    justify-content: space-between;   
+}
+
+.nav li a {
+    background-color: #d9d9d9;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav li a:hover{
+    background-color:#134573;
+    opacity: 90%;
+}
+.nav > li{
+    float: left;
+    width: 50%;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    width: 25%;
+}
+
+.nav li:hover > ul{
+    display: block;
+}
+
+.nav li ul li {
+    position: relative;
+}
+
+.nav li ul li ul {
+    right: -25%;
+    top: 0%;
+}
+
+.menu1{
+    font-size: 1.4rem;
+}
+.menu2{
+    font-size: 1rem;
+}
+.menu3{
+    width: 9rem;
+    font-size: 1rem;
+}
+
+/* AQUI TERMINA LA BARRA DE MENUS DESPLEGABLES */
+
 /*.infoFilms{
     width: 100%;
     height: 100vh;
@@ -174,7 +238,7 @@ img {
 /* FOOTER */
 .footer{
     width: 100%;
-    height: 100px;
+    height: 4rem;
     display: block;
     background-color: #134573;
     position: fixed;
