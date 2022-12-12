@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Jost&family=Kantumruy+Pro:wght@700&family=La+Belle+Aurore&family=Lusitana&display=swap');
 
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -8,7 +10,7 @@
 
 /* HEADER */
 
-.banner{
+.banner {
     width: 100%;
     height: 150px;
     display: block;
@@ -16,11 +18,11 @@
     position: fixed;
     z-index: 2;
     top: 0;
-    
+
 
 }
 
-.imgBanner{
+.imgBanner {
     width: 100%;
     height: 100%;
     display: block;
@@ -28,6 +30,7 @@
     max-width: 700px;
     min-width: 400px;
 }
+
 /* AQUI TERMINA EL HEADER */
 
 h1 {
@@ -36,19 +39,19 @@ h1 {
 
 
 .conteiner {
-    width: 100%;
-    height: 50%;
+    width: auto;
+    height: auto;
     margin-top: 155px;
     margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fcfbfb;
-    flex-direction: column;
+
 
 }
 
-.menuBar{
+.menuBar {
     padding: 0;
     display: flex;
     align-items: center;
@@ -60,12 +63,12 @@ h1 {
     top: 150px;
 }
 
-.desplegables{
+.desplegables {
     width: 100%;
     height: 100%;
     max-width: 800px;
     min-width: 400px;
-    display:block;
+    display: block;
     margin: auto;
     justify-content: space-between;
 }
@@ -75,106 +78,110 @@ h1 {
 .cajaFilms {
     width: 100%;
     height: 100%;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    /* align-items: center;
+    justify-content: center; */
     background-color: #fcfbfb;
-    padding: 0 1.0rem;
+
     padding-top: 10%;
-    scroll-behavior: smooth;
-        
+    grid-column: repeat(4, 1fr);
+    ;
+
+
+
 }
 
 .carta {
-    padding: 0 1.0rem;
-    margin: 2rem;
-    width: 100%;
-    max-width: 80rem;
-    padding: 30px;
+    padding: 1.5rem;
+    margin: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 80%;
+    min-width: 50%;
+    min-height: 50%;
     background-color: #fcfbfb;
     color: grey;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
     display: flex;
     align-items: center;
     border-radius: 2rem;
-    
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+
 }
 
+.carta:hover {
+    box-shadow: 0 1.4rem 8rem rgba(47, 121, 170, 0.2);
+    cursor: pointer;
+}
 
 
 img {
-    padding: 20px;
-    min-width: 20rem;
+    padding: 10px;
+    min-width: 3rem;
     max-width: 20rem;
-    height: 25rem;
-    /*transform: translateX(-8rem);*/
-    position: relative;
+    max-height: 12rem;
     border-radius: 2rem;
 }
 
-.img img{
-    padding: 1rem;
-    min-width: 20rem;
-    max-width: 20rem;
-    height: 25rem;
-    border-radius: 2rem;
+.infoFilms {
     
 }
 
-/*img:hover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 2rem;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #fff;
-    cursor: pointer;
-}*/
+
 
 /*texto del contenido*/
 .cajatext {
-    font-family: 'La Belle Aurore', cursive;
-    padding: 20px;
-    margin-bottom: 3rem;
-    font-size: 1.4rem;
+
+    font-family: 'Lusitana', serif;
+    max-width: 20rem;
+    max-height: 20rem;
+    padding: 3px;
+    margin-bottom: 0.5rem;
+    font-size: 0.5rem;
     color: #69696c;
 }
 
 /*letra año*/
 .text {
-    font-size: 2.5rem;
+    max-width: 50rem;
+    max-height: 30rem;
+    font-size: 1.1rem;
     margin: 1rem 0 1rem;
-    padding: 20px;
+    padding: 3px;
     text-transform: uppercase;
     color: #456786;
 }
 
 /*nombre de la peli*/
 .nameMovie {
-    padding: 2rem;
-    padding-top: 70px;
-    margin-bottom: 10px;
+    max-width: 40rem;
+    max-height: 20rem;
+    padding: 5px;
+    padding-top: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #69696c;
 }
 
 /*director*/
 .text1 {
-    padding: 20px;
+    padding: 3px;
     font-family: 'Inter', sans-serif;
     display: block;
     color: #d9d9d9;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin: .5rem 0 1rem;
 
 }
 
 /* FOOTER */
-.footer{
+.footer {
     width: 100%;
     height: 150px;
     display: block;
@@ -183,27 +190,59 @@ img {
     z-index: index 2;
     bottom: 0;
 }
+
 /* AQUI TERMINA EL FOOTER */
 
-/*@media screen and (max-width: 1068px){
-    .cajaFilms{
+
+
+@media screen and (max-width: 1068px) {
+    .carta {
         max-width: 80rem;
+
     }
-    .img{
+
+    .img {
         min-width: 30rem;
         max-width: 30rem;
     }
 }
 
-@media screen and (max-width: 868px){
-    .cajaFilms{
-        padding: 2.5rem;
+@media screen and (max-width: 868px) {
+    .carta {
+        padding: 2rem;
     }
 }
 
-@media screen and (max-width: 768px){
-    .cajaFilms{
+@media screen and (max-width: 768px) {
+    .carta {
         padding: 2.5rem;
+        flex-direction: column;
+    }
+
+    .img {
+        min-width: 100%;
+        max-width: 100%;
+        /* transform: translate(0, -8rem); */
+    }
+}
+
+@media screen and (max-width: 653px) {
+    .carta {
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+
+    .img {
+        min-width: 100%;
+        max-width: 100%;
+        /* transform: translate(0, -8rem); */
+    }
+}
+
+/* @media screen and (min-width: 200px){
+    .carta{
+        max-width: 30rem;
+        padding: 2rem;
         flex-direction: column;
     }
     .img{
@@ -211,4 +250,4 @@ img {
         max-width: 100%;
         transform: translate(0, -8rem);
     }
-}*/
+} */
