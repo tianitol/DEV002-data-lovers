@@ -1,15 +1,15 @@
-import { displayCard } from '../src/main.js';
+import { ordenarDataDes } from '../src/data.js';
 
 
-const data  =
-  {
-    films: [ 
-    { 
-    "title": "Castle in the Sky",
-    "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
-    "director": "Hayao Miyazaki",
-    "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg",
-    "release_date": "1986",
+const data =
+{
+  films: [
+    {
+      "title": "Castle in the Sky",
+      "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
+      "director": "Hayao Miyazaki",
+      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg",
+      "release_date": "1986",
     },
     {
       "title": "My Neighbor Totoro",
@@ -39,22 +39,27 @@ const data  =
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg",
       "release_date": "1991",
     }
-]}  
+  ]
+}
 
-// describe ('displayCard mostrará las peliculas', ()=> {
-//     it('is a function', () => {
-//       expect(typeof(displayCard)).toBe('function');  
-//     });
+console.log(data);
 
-//     it('retornara un array con longitud de 5', () => {
-//       expect(displayCard(data)).toHaveLength(5);
-//     });
+describe('ordenara las peliculas por año descendente', () => {
+  it('is a function', () => {
+    expect(typeof (ordenarDataDes)).toBe('function');
+  });
 
-//     it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
-//       expect(() => displayCard(undefined).toThrow(TypeError));
-//       expect(() => displayCard(null).toThrow(TypeError));
-//     });
 
-// });
+  it('retornara un array cuyo indice es igual a "1986"', () => {
+    const elemento = "1986"
+    expect(ordenarDataDes(data.release_date)).toEqual([i ==]);
+  });
 
-    
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => ordenarDataDes(undefined).toThrow(TypeError));
+    expect(() => ordenarDataDes(null).toThrow(TypeError));
+  });
+
+});
+
+
