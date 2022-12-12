@@ -1,30 +1,52 @@
-import data from './data/ghibli/ghibli.js';
-// import { displayCard } from './main.js';
-import * as todo from './main.js';
-
-const peliculas = data.films;
-
 
 //orden descendente 2014
-export const ordenarDataDes = peliculas.sort((a, b) => b.release_date - a.release_date);
+export const ordenarDataDes = (dataGhibli) => {
+  const orderDateDes = dataGhibli.sort((a, b) => b.release_date - a.release_date);
 
-console.log(ordenarDataDes)
+  return orderDateDes;
+}
 
-// //orden ascendente 1986
-// export const ordenarDataAs = peliculas.sort((a, b) => a.release_date - b.release_date);
+ //orden ascendente 1986
+ export const ordenarDataAs = (dataGhibli) => {
+  const orderDateAs = dataGhibli.sort((a, b) => a.release_date - b.release_date);
 
-// // console.log(ordenarDataAs);
-
-
-
-
-
-
+  return orderDateAs;
+ }
 
 
+//FUNCION FILTRAR
 
-//OPCION PRUEBA PARA NO IMPORTAR DATA EN AMBOS ARCHIVOS, SOLO MAIN
-// export const ordenarDataDes = (dataGhibli) => {
-//     dataGhibli.sort((a, b) =>  b.release_date - a.release_date);
-    
-// }
+export const filterDirector = (dataDirector) => {
+    const orderByDirector = dataDirector.filter(pelicula => pelicula.director == "Hayao Miyazaki");
+
+    return orderByDirector;
+} 
+
+
+
+
+
+
+
+
+
+
+// let iTakahata = peliculas.filter(pelicula => pelicula.director == "Isao Takahata");
+// console.log(iTakahata);
+
+// let yKondo = peliculas.filter(pelicula => pelicula.director == "Yoshifumi Kondō");
+// console.log(yKondo);
+
+// let hMorita = peliculas.filter(pelicula => pelicula.director == "Hiroyuki Morita");
+// console.log(hMorita);
+
+// let gMiyazaki = peliculas.filter(pelicula => pelicula.director == "Gorō Miyazaki");
+// console.log(gMiyazaki);
+
+// let hYonebayashi = peliculas.filter(pelicula => pelicula.director == "Hiromasa Yonebayashi");
+// console.log(hYonebayashi);
+
+
+
+
+

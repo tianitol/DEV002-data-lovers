@@ -147,11 +147,9 @@ ul, ol {
     display: grid;
     /* align-items: center;
     justify-content: center; */
-    background-color: #fcfbfb
+    background-color: #fcfbfb;
     padding-top: 10%;
     grid-column: repeat(4, 1fr);
-    ;
-
 
 
 }
@@ -201,6 +199,7 @@ img {
     margin-bottom: 0.5rem;
     font-size: 0.5rem;
     color: #69696c;
+    transition: .3s;
 }
 
 .cajatext:hover {
@@ -211,9 +210,7 @@ img {
     margin-bottom: 0.6rem;
     font-size: 0.6rem;
     color: #47474a;
-    cursor: ;
-    border: 1px #134573;
-
+    transform: scale(1.2);
 }
 
  /* TEXTO "AÑO" */
