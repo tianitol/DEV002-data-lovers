@@ -1,23 +1,35 @@
-
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 
-/* HEADER */
 
-.banner{
+
+/*header {
+    background-color: #134573;
+    color: #eee;
+    display: flex;
+    position: absolute;
+    font-size: large;
+    padding: 50px;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
     width: 100%;
-    height: 150px;
-    display: block;
+
+}*/
+
+/* HEADER */
+.banner{
+
+    width: 100%;
+    height: 9rem;
+    display: flex;
     background-color: #134573;
     position: fixed;
     z-index: 2;
     top: 0;
-    
-
 }
 
 .imgBanner{
@@ -30,14 +42,17 @@
 }
 /* AQUI TERMINA EL HEADER */
 
-h1 {
-    font-family: 'Inter', sans-serif;
-}
-
+/*.fondoTo {
+    position: absolute;
+    width: 100%;
+    background-image: url(img/totoro.jpeg);
+    background-size:contain;
+    background-repeat: no-repeat;
+}*/
 
 .conteiner {
     width: 100%;
-    height: 50%;
+    height: 100%;
     margin-top: 155px;
     margin-bottom: 100px;
     display: flex;
@@ -45,8 +60,13 @@ h1 {
     justify-content: center;
     background-color: #fcfbfb;
     flex-direction: column;
+    padding: 0 1.5rem;
+    scroll-behavior: smooth;    
+   
 
 }
+
+/* AQUI COMIENZA LA BARRA DE MENUS DESPLEGABLES */
 
 .menuBar{
     padding: 0;
@@ -55,24 +75,92 @@ h1 {
     justify-content: center;
     background-color: #d9d9d9;
     width: 100%;
-    height: 60px;
+    height: 3rem;
     position: fixed;
-    top: 150px;
+    top: 9rem;
+    z-index: 2;
+    max-width: 100%;
+    min-width: 400px;
+    font-size: 1.15rem;
 }
 
 .desplegables{
     width: 100%;
     height: 100%;
-    max-width: 800px;
+    max-width: 100%;
     min-width: 400px;
     display:block;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
+ul, ol {
+    list-style: none;
+    width: 50%;
+    text-align: center;
+    justify-content: space-between;   
+}
 
+.nav li a {
+    background-color: #d9d9d9;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
 
-.cajaFilms {
+.nav li a:hover{
+    background-color:#134573;
+    opacity: 90%;
+}
+.nav > li{
+    float: left;
+    width: 50%;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    width: 25%;
+}
+
+.nav li:hover > ul{
+    display: block;
+}
+
+.nav li ul li {
+    position: relative;
+}
+
+.nav li ul li ul {
+    right: -25%;
+    top: 0%;
+}
+
+.menu1{
+    font-size: 1.4rem;
+}
+.menu2{
+    font-size: 1rem;
+}
+.menu3{
+    width: 9rem;
+    font-size: 1rem;
+}
+
+/* AQUI TERMINA LA BARRA DE MENUS DESPLEGABLES */
+
+/*.infoFilms{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    padding: 0 1.5rem;
+}*/
+
+.cajaFilms{
     width: 100%;
     height: 100%;
     margin-top: 100px;
@@ -80,25 +168,22 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #fcfbfb;
-    padding: 0 1.0rem;
-    padding-top: 10%;
+    padding: 0 1.5rem;
     scroll-behavior: smooth;
-        
 }
 
 .carta {
-    padding: 0 1.0rem;
-    margin: 2rem;
-    width: 100%;
-    max-width: 80rem;
     padding: 30px;
-    background-color: #fcfbfb;
-    color: grey;
+    margin: 50px;
+    width: 100%;
+    max-width: 900px;
+    min-width: 400px;
+    padding: 20px;
+    background-color: #fff;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
     display: flex;
     align-items: center;
     border-radius: 2rem;
-    
 }
 
 
@@ -114,69 +199,46 @@ img {
 }
 
 .img img{
-    padding: 1rem;
-    min-width: 20rem;
-    max-width: 20rem;
-    height: 25rem;
-    border-radius: 2rem;
-    
-}
-
-/*img:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     border-radius: 2rem;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #fff;
-    cursor: pointer;
-}*/
+}
 
-/*texto del contenido*/
 .cajatext {
-    font-family: 'La Belle Aurore', cursive;
     padding: 20px;
     margin-bottom: 3rem;
     font-size: 1.4rem;
-    color: #69696c;
+    color: rgba(0, 0, 0, .7);
 }
-
-/*letra año*/
 .text {
     font-size: 2.5rem;
     margin: 1rem 0 1rem;
     padding: 20px;
     text-transform: uppercase;
-    color: #456786;
+    color: #4facfe;
+}
+    
+.nameMovie{
+    padding: 20px;
 }
 
-/*nombre de la peli*/
-.nameMovie {
-    padding: 2rem;
-    padding-top: 70px;
-    margin-bottom: 10px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #69696c;
-}
-
-/*director*/
 .text1 {
     padding: 20px;
-    font-family: 'Inter', sans-serif;
     display: block;
-    color: #d9d9d9;
-    font-size: 1.4rem;
+    color: rgba(0, 0, 0, .5);
+    font-size: 1.6rem;
     font-weight: 600;
     margin: .5rem 0 1rem;
-
+    
 }
 
 /* FOOTER */
 .footer{
     width: 100%;
-    height: 150px;
+    height: 4rem;
     display: block;
     background-color: #134573;
     position: fixed;
@@ -194,13 +256,11 @@ img {
         max-width: 30rem;
     }
 }
-
 @media screen and (max-width: 868px){
     .cajaFilms{
         padding: 2.5rem;
     }
 }
-
 @media screen and (max-width: 768px){
     .cajaFilms{
         padding: 2.5rem;

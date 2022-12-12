@@ -27,17 +27,27 @@ const displayCard = (dataGhibli) => {
     })
 }
 
-displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
+//displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
 
-console.log(displayCard);
+let hMiyazaki = peliculas.filter(pelicula => pelicula.director == "Hayao Miyazaki");
+console.log(hMiyazaki);
 
+let iTakahata = peliculas.filter(pelicula => pelicula.director == "Isao Takahata");
+console.log(iTakahata);
+
+let yKondo = peliculas.filter(pelicula => pelicula.director == "Yoshifumi Kondō");
+console.log(yKondo);
+
+let hMorita = peliculas.filter(pelicula => pelicula.director == "Hiroyuki Morita");
+console.log(hMorita);
+
+let gMiyazaki = peliculas.filter(pelicula => pelicula.director == "Gorō Miyazaki");
+console.log(gMiyazaki);
+
+let hYonebayashi = peliculas.filter(pelicula => pelicula.director == "Hiromasa Yonebayashi");
+console.log(hYonebayashi);
+
+displayCard(hMiyazaki); 
 export { displayCard }
 
 
-
-/* EJEMPLO DE FILTER
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-
-const result = words.filter(word => word.length > 6);
-
-console.log(result);*/
