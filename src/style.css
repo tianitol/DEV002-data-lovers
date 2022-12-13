@@ -2,11 +2,27 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 
-/* HEADER */
 
+<<<<<<< HEAD
+=======
+
+/*header {
+    background-color: #134573;
+    color: #eee;
+    display: flex;
+    position: absolute;
+    font-size: large;
+    padding: 50px;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+
+}*/
+
+>>>>>>> f79a836258d198ef6109ac9216be5e09a12d0e56
 /* HEADER */
 .banner{
     width: 100%;
@@ -115,8 +131,11 @@
     display: flex;
     align-items: center;
     border-radius: 2rem;
+<<<<<<< HEAD
     height: ;
     
+=======
+>>>>>>> f79a836258d198ef6109ac9216be5e09a12d0e56
 }
 
 

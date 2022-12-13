@@ -31,6 +31,7 @@ displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le pa
 
 console.log(displayCard);
 
+<<<<<<< HEAD
 export { displayCard }
 
 
@@ -41,3 +42,5 @@ const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']
 const result = words.filter(word => word.length > 6);
 
 console.log(result);*/
+=======
+>>>>>>> f79a836258d198ef6109ac9216be5e09a12d0e56
