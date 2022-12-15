@@ -308,7 +308,7 @@ img {
     }
 }
 
-/* @media screen and (min-width: 200px){
+@media screen and (max-width: 200px){
     .carta{
         max-width: 30rem;
         padding: 2rem;
@@ -319,5 +319,5 @@ img {
         max-width: 100%;
         transform: translate(0, -8rem);
     }
-} */
+} 
 

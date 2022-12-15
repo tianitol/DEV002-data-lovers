@@ -29,7 +29,7 @@ export const filterDirector2 = (dataDirector) => {
 
 
 
-export const percentDir = function (a,b) {
+export const percentDir = (a,b) => {
   const percentMo = (a/b)*100;
   return percentMo;
 }
@@ -40,10 +40,10 @@ export const percentDir = function (a,b) {
 //FUNCION CALCULAR 
 
 
-//  export const aportesHaMi = (HaMiFilms) => {
-//  const porcePeli = 
-//   return nuevoArrayDir;
-// }
+//   export const aportesHaMi = (HaMiFilms) => {
+//   const porcePeli = 
+//    return porcePeli;
+//  }
 
 
 
