@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2 } from './data.js';
+import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2, percentDir } from './data.js';
 
 const peliculas = data.films;
 const containerGhibli = document.getElementById("root");
@@ -27,6 +27,7 @@ const displayCard = (dataGhibli) => {
 
 //displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
  displayCard(peliculas)
+ document.getElementById("calculo").innerHTML = " Estudio Ghibli ha realizado 20 peliculas entre los años 1986 y 2014 ";
 
 
 // FUNCION ORDENAR
@@ -34,12 +35,14 @@ document.getElementById("desc").addEventListener("click", (e) => {
     e.preventDefault();
 
     displayCard(ordenarDataDes(peliculas));
+    // document.getElementById("calculo").innerHTML = "Este director a realizado "
 })
 
 document.getElementById("asc").addEventListener("click", (e) => {
     e.preventDefault();
 
     displayCard(ordenarDataAs(peliculas));
+    // document.getElementById("calculo").innerHTML = "Este director a realizado "
 })
 
 
@@ -48,15 +51,20 @@ document.getElementById("asc").addEventListener("click", (e) => {
 document.getElementById("haMi").addEventListener("click", (e) => {
     e.preventDefault();
     console.log("hizo click!")
-    displayCard(filterDirector(peliculas));
+    const resultFilterDir = filterDirector(peliculas);
+    displayCard(resultFilterDir);
     
-    //  document.getElementById("calculo").value = filterDirector.length;
+    document.getElementById("calculo").innerHTML = "Este director a realizado "+ resultFilterDir.length + " peliculas, lo que equivale a " + percentDir((resultFilterDir.length),20) + " % de las peliculas del estudio";
+
 })
 
 document.getElementById("isTa").addEventListener("click", (e) => {
     e.preventDefault();
     console.log("hizo click!")
+    const resultFilterDir2 = filterDirector2(peliculas);
     displayCard(filterDirector2(peliculas));
+
+    document.getElementById("calculo").innerHTML = "Este director a realizado "+ resultFilterDir2.length + " peliculas, lo que equivale a " + percentDir((resultFilterDir2.length),20) + " % de las peliculas del estudio";
 })
 
 

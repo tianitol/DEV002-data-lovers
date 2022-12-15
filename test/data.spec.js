@@ -52,7 +52,7 @@ describe('ordenara las peliculas por año descendente', () => {
 
   it('retornara un array cuyo indice es igual a "1986"', () => {
     const elemento = "1986"
-    expect(ordenarDataDes(data.release_date)).toEqual([i ==]);
+    expect(ordenarDataDes(data.release_date)).toEqual([i ==5]);
   });
 
   it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
