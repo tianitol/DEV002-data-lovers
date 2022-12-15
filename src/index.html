@@ -18,22 +18,46 @@
 
 <body>
   <header>
-    <div class="banner"><img class="imgBanner" src="img/700x170pxBannerTotoroAzul.gif" alt="pequeño roedor blanco caminando de derecha a izquierda, dejando rastro en un fondo azul"></div>
+    <div class="banner"><img class="imgBanner" src="img/700x170pxBannerTotoroAzul.gif"
+        alt="pequeño roedor blanco caminando de derecha a izquierda, dejando rastro en un fondo azul"></div>
   </header>
   <main class="conteiner">
-    <div class="menuBar"> 
-    <p class="desplegables">Aquí van los menús desplegables con las funciones</p> 
+    <div class="menuBar">
+      <ul class="nav">
+        <li class="menu1"><a href="">Ordenar</a>
+          <ul>
+            <li class="menu2" id="asc"><a href="">Año Asc</a></li>
+            <li class="menu2" id="desc"><a href="">Año Desc</a></li>
+          </ul>
+        </li>
+        <li class="menu1"><a href="">Filtrar</a>
+          <ul>
+            <li class="menu2"><a href="">Director</a>
+              <ul>
+                <li class="menu3" id="haMi"><a href="">Hayao Miyazaki</a></li>
+                <li class="menu3" id="isTa"><a href="">Isao Takahata</a></li>
+                <li class="menu3" id="yoKo"><a href="">Yoshifumi Kondō</a></li>
+                <li class="menu3" id="hiMo"><a href="">Hiroyuki Morita</a></li>
+                <li class="menu3" id="goMi"><a href="">Gorō Miyazaki</a></li>
+                <li class="menu3" id="hiYo"><a href="">Hiromasa Yonebayashi</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-   
-    <div class="fondoTo"></div>
+    
     <div class="cajafilms" id="root">
       <!-- aqui van las tarjetas de forma dinamica -->
     </div>
   </main>
   <footer class="footer">
+    <p id="calculo"></p>
     <img class="imgBanner" src="img/Barra footer.jpeg" alt="">
   </footer>
   <script src="main.js" type="module"></script>
+  <script src="data.js" type="module"></script>
+  
 </body>
 
 </html>

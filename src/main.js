@@ -1,17 +1,13 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2 } from './data.js';
 
-//console.log(example, data);
-//console.log(data.films[0].poster)
+const peliculas = data.films;
+const containerGhibli = document.getElementById("root");
 
-let peliculas = data.films;
-let containerGhibli = document.getElementById("root");
 
-//peliculas.forEach( films => console.log(films) )
 // crear una constante para guardar 
-export const displayCard = (dataGhibli) => {
+const displayCard = (dataGhibli) => {
+    containerGhibli.innerHTML = "";
     dataGhibli.forEach((films) => {
         let cardFilms = document.createElement("div");
         cardFilms.classList.add("carta");
@@ -27,7 +23,76 @@ export const displayCard = (dataGhibli) => {
     })
 }
 
-displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
 
-console.log(displayCard);
 
+//displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
+ displayCard(peliculas)
+
+
+// FUNCION ORDENAR
+document.getElementById("desc").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    displayCard(ordenarDataDes(peliculas));
+})
+
+document.getElementById("asc").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    displayCard(ordenarDataAs(peliculas));
+})
+
+
+
+// FUNCION FILTRAR
+document.getElementById("haMi").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    displayCard(filterDirector(peliculas));
+    
+    //  document.getElementById("calculo").value = filterDirector.length;
+})
+
+document.getElementById("isTa").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    displayCard(filterDirector2(peliculas));
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//INTENTO  DE CALCULO NUEVO ARRAY CON HAMI
+// const nuevoArrayDir = peliculas.map(x => x.Director)
+// const arrayHami = filterDirector(nuevoArrayDir)
+// console.log(nuevoArrayDir)
+
+//INTENTO 2  DE CALCULO NUEVO ARRAY CON HAMI
+
+// const nuevoArrayDir (Array) {
+//     let counter = 0;
+
+//     for(let i = 0; i < peliculas.length; i++) {
+//         if (peliculas[i] == "Hayao Miyazaki"){
+//             counter += [i];
+//         }
+//     }
+//     return counter;
+// }
+
+//INTENTO 3  DE CALCULO NUEVO ARRAY CON HAMI
+
+// const arrayHami = filterDirector
+// arrayHami.map(x => x){
+//     const 
+// }
