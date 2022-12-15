@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Jost&family=Kantumruy+Pro:wght@700&family=La+Belle+Aurore&family=Lusitana&display=swap');
 
+
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    cursor: url(img/bolita.png), auto;
+}
+
+body{
+    display: flex;
 }
 
 /* AQUI COMIENZA EL HEADER */
@@ -30,7 +37,7 @@
 /* AQUI TERMINA EL HEADER */
 
 
-
+/* MAIN CONTENEDOR DE TODO*/
 .conteiner {
     width: 100%;
     height: 100%;
@@ -129,39 +136,26 @@ ul, ol {
 
 /* AQUI TERMINA LA BARRA DE MENUS DESPLEGABLES */
 
-/*.infoFilms{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eee;
-    padding: 0 1.5rem;
-}*/
 
+/*AQUI PARTEN LAS TARJETAS DE PELIS*/
 
-
+/* CONTENEDOR DE TODAS LAS TARJETAS*/
 .cajaFilms{
     width: 100%;
     height: 100%;
-    display: grid;
-    /* align-items: center;
-    justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
     background-color: #fcfbfb;
-    padding-top: 10%;
-    grid-column: repeat(4, 1fr);
+    margin: ;
 
 
 }
 
+/* CARTAS DE LA PELI*/
 .carta {
     padding: 1.5rem;
     margin: 1rem;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 80%;
-    min-width: 50%;
-    min-height: 50%;
     background-color: #fcfbfb;
     color: grey;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
@@ -179,41 +173,47 @@ ul, ol {
     cursor: pointer;
 }
 
+/* CAJA QUE CONTIENE TODOS LOS TEXTOS DE LA TARJETA*/
+.infoFilms{
+    width: 70%;
+    height: 100%; 
+}
 
+/*POSTER*/
 img {
-    padding: 10px;
-    min-width: 3rem;
-    max-width: 20rem;
-    max-height: 12rem;
+    padding: 0px;   
     border-radius: 2rem;
 }
 
-/* TEXTO: DESCRIPCION DE LA PELI */
-
+/* TEXTO DE DESCRIPCION DE LA PELI */
 .cajatext {
-
     font-family: 'Lusitana', serif;
     max-width: 20rem;
     max-height: 20rem;
     padding: 3px;
-    margin-bottom: 0.5rem;
-    font-size: 0.5rem;
-    color: #69696c;
+    font-size: 0.6rem;
+    color: #929298;
     transition: .3s;
 }
 
 .cajatext:hover {
+    background-color: #134573;
+    opacity: 70%;
     font-family: 'Lusitana', serif;
-    max-width: 30rem;
-    max-height: 30rem;
-    padding: 5px;
+    max-width: 50rem;
+    max-height: 50rem;
+    padding: 0.5rem;
     margin-bottom: 0.6rem;
-    font-size: 0.6rem;
-    color: #47474a;
-    transform: scale(1.2);
+    font-size: 0.8rem;
+    color: #fff;
+    transform: scale(1.4);
+    border-radius: 3px;
+    cursor: url(img/buscar.png), auto;
+    
 }
 
- /* TEXTO "AÑO" */
+
+ /* PARRAFO TEXTO "AÑO" */
 
 .text {
     max-width: 50rem;
@@ -226,12 +226,12 @@ img {
 }
 
 
-/* TEXTO : TITULO DE LA PELICULA */
+/* PARRAFO TEXTO TITULO DE LA PELICULA */
 .nameMovie {
     max-width: 40rem;
     max-height: 20rem;
     padding: 5px;
-    padding-top: 2px;
+    padding-top: 7px;
     margin-bottom: 2px;
     margin-top: 2px;
     font-family: 'Inter', sans-serif;
@@ -240,6 +240,7 @@ img {
     color: #69696c;
 }
 
+/* P - TEXTO NOMBRE DEL DIRECTOR */
 .text1 {
     padding: 3px;
     font-family: 'Inter', sans-serif;

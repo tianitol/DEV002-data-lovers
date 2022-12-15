@@ -18,7 +18,7 @@ export const ordenarDataDes = (dataGhibli) => {
 
 export const filterDirector = (dataDirector) => {
     const orderByDirector = dataDirector.filter(pelicula => pelicula.director == "Hayao Miyazaki");
-
+    
     return orderByDirector;
 } 
 
@@ -26,6 +26,32 @@ export const filterDirector = (dataDirector) => {
 
 
 
+export const filterDirector2 = (dataDirector) => {
+  const orderByDirector2 = dataDirector.filter(pelicula => pelicula.director == "Isao Takahata");
+  return orderByDirector2;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FUNCION CALCULAR 
+
+// const aportesHaMi = (HaMiFilms) => {
+//   const nuevoArrayDir = HamiFilms.map(x => x.dataDirector)
+// console.log(nuevoArrayDir)
 
 
 

@@ -1,8 +1,9 @@
 import data from './data/ghibli/ghibli.js';
-import { ordenarDataDes, ordenarDataAs, filterDirector } from './data.js';
+import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2 } from './data.js';
 
 const peliculas = data.films;
 const containerGhibli = document.getElementById("root");
+console.log()
 
 // crear una constante para guardar 
 const displayCard = (dataGhibli) => {
@@ -26,24 +27,66 @@ const displayCard = (dataGhibli) => {
 displayCard(peliculas)
 
 
-
+// FUNCION ORDENAR
 document.getElementById("desc").addEventListener("click", (e) => {
-  e.preventDefault();
-    
-  displayCard(ordenarDataDes(peliculas));
+    e.preventDefault();
+
+    displayCard(ordenarDataDes(peliculas));
 })
 
 document.getElementById("asc").addEventListener("click", (e) => {
     e.preventDefault();
-      
+
     displayCard(ordenarDataAs(peliculas));
-  })
-  
+})
 
 
 
-  document.getElementById("haMi").addEventListener("click", (e) => {
+// FUNCION FILTRAR
+document.getElementById("haMi").addEventListener("click", (e) => {
     e.preventDefault();
-      console.log("hizo click!")
+    console.log("hizo click!")
     displayCard(filterDirector(peliculas));
-  })
+})
+
+document.getElementById("isTa").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    displayCard(filterDirector2(peliculas));
+})
+
+
+
+
+
+
+
+
+
+
+
+
+//INTENTO  DE CALCULO NUEVO ARRAY CON HAMI
+// const nuevoArrayDir = peliculas.map(x => x.Director)
+// const arrayHami = filterDirector(nuevoArrayDir)
+// console.log(nuevoArrayDir)
+
+//INTENTO 2  DE CALCULO NUEVO ARRAY CON HAMI
+
+// const nuevoArrayDir (Array) {
+//     let counter = 0;
+
+//     for(let i = 0; i < peliculas.length; i++) {
+//         if (peliculas[i] == "Hayao Miyazaki"){
+//             counter += [i];
+//         }
+//     }
+//     return counter;
+// }
+
+//INTENTO 3  DE CALCULO NUEVO ARRAY CON HAMI
+
+// const arrayHami = filterDirector
+// arrayHami.map(x => x){
+//     const 
+// }
