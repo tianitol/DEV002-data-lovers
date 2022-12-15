@@ -3,7 +3,7 @@ import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2 } from '
 
 const peliculas = data.films;
 const containerGhibli = document.getElementById("root");
-console.log()
+
 
 // crear una constante para guardar 
 const displayCard = (dataGhibli) => {
@@ -23,8 +23,10 @@ const displayCard = (dataGhibli) => {
     })
 }
 
+
+
 //displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
-displayCard(peliculas)
+ displayCard(peliculas)
 
 
 // FUNCION ORDENAR
@@ -47,6 +49,8 @@ document.getElementById("haMi").addEventListener("click", (e) => {
     e.preventDefault();
     console.log("hizo click!")
     displayCard(filterDirector(peliculas));
+    
+    //  document.getElementById("calculo").value = filterDirector.length;
 })
 
 document.getElementById("isTa").addEventListener("click", (e) => {
@@ -54,6 +58,8 @@ document.getElementById("isTa").addEventListener("click", (e) => {
     console.log("hizo click!")
     displayCard(filterDirector2(peliculas));
 })
+
+
 
 
 
