@@ -1,4 +1,4 @@
-import { ordenarDataDes } from '../src/data.js';
+import { filterDirector, ordenarDataDes, ordenarDataAs ,percentDir } from '../src/data.js';
 
 
 const data =
@@ -44,16 +44,24 @@ const data =
 
 console.log(data);
 
+//TEST N1.1 ORDENAR DATA DESC
+
 describe('ordenara las peliculas por año descendente', () => {
   it('is a function', () => {
     expect(typeof (ordenarDataDes)).toBe('function');
   });
 
 
-  it('retornara un array cuyo indice es igual a "1986"', () => {
-    const elemento = "1986"
-    expect(ordenarDataDes(data.release_date)).toEqual([i ==5]);
-  });
+  // it('retornara nuevo array sin el elemento "1988"', () => {
+
+  //   expect(filter).toContain(["1991","1989","1986"]);
+  // });
+
+  // it('retornara "1991" como primer elemento', () => {
+  //   const primerElemento = ordenarDataDes(data.release_date);
+  //   expect(primerElemento).tobe("1991");
+
+  // });
 
   it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
     expect(() => ordenarDataDes(undefined).toThrow(TypeError));
@@ -63,3 +71,62 @@ describe('ordenara las peliculas por año descendente', () => {
 });
 
 
+//TEST N1.2 ORDENAR DATA ASC
+
+describe('ordenara las peliculas por año ascendente', () => {
+  it('is a function', () => {
+    expect(typeof (ordenarDataAs)).toBe('function');
+  });
+
+
+  //   it('retornara un array cuyo indice es igual a "1986"', () => {
+  //     const elemento = "1986"
+  //     expect(ordenarDataAs(data.release_date[0])).toEqual ;
+  //   });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => ordenarDataAs(undefined).toThrow(TypeError));
+    expect(() => ordenarDataAs(null).toThrow(TypeError));
+  
+  });
+});
+
+
+// //TEST N2 FILTRAR DATA
+
+describe('filtrara la data por el nombre director', () => {
+  it('is a function', () => {
+      expect(typeof (filterDirector)).toBe('function');
+  });
+
+
+//   it('retornara un array cuyo indice es igual a "1986"', () => {
+//     const elemento = "1986"
+//     expect(ordenarDataDes(data.release_date)).toEqual([i ==5]);
+//   });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+      expect(() => filterDirector(undefined).toThrow(TypeError));
+      expect(() => filterDirector(null).toThrow(TypeError));
+  });
+
+});
+
+// //TEST N3 CALCULO ADICIONAL 
+describe('calculara el porcentaje de aportes por director', () => {
+  it('is a function', () => {
+    expect(typeof (percentDir)).toBe('function');
+  });
+
+
+//   it('retornara un array cuyo indice es igual a "1986"', () => {
+//     const elemento = "1986"
+//     expect(ordenarDataDes(data.release_date)).toEqual([i ==5]);
+//   });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => percentDir(undefined).toThrow(TypeError));
+    expect(() => percentDir(null).toThrow(TypeError));
+  });
+
+});
