@@ -1,4 +1,4 @@
-import { ordenarDataDes } from '../src/data.js';
+import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2, percentDir } from '../src/data.js';
 
 
 const data =
@@ -44,15 +44,18 @@ const data =
 
 console.log(data);
 
-describe('ordenara las peliculas por año descendente', () => {
+describe('ordenarDataDes ordenará las peliculas por año descendente', () => {
   it('is a function', () => {
     expect(typeof (ordenarDataDes)).toBe('function');
   });
 
-
-  it('retornara un array cuyo indice es igual a "1986"', () => {
-    const elemento = "1986"
-    expect(ordenarDataDes(data.release_date)).toEqual([i ==5]);
+  it('Deberia devolver las películas por año en des',() =>{
+    let filmsDes = ordenarDataDes(data);
+    expect(filmsDes[0].release_date).toEqual('1991');
+    expect(filmsDes[1].release_date).toEqual('1989');
+    expect(filmsDes[2].release_date).toEqual('1988');
+    expect(filmsDes[3].release_date).toEqual('1988');
+    expect(filmsDes[4].release_date).toEqual('1986');
   });
 
   it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
@@ -61,5 +64,52 @@ describe('ordenara las peliculas por año descendente', () => {
   });
 
 });
+ 
+
+describe('ordenarDataAs ordenará las peliculas por año ascendente', () => {
+  it('is a function', () => {
+    expect(typeof (ordenarDataAs)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => ordenarDataAs(undefined).toThrow(TypeError));
+    expect(() => ordenarDataAs(null).toThrow(TypeError));
+  });
+
+});
 
 
+describe('devolverá las películas del director Hayao Miyazaki', () => {
+  it('is a function', () => {
+    expect(typeof (filterDirector)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => filterDirector(undefined).toThrow(TypeError));
+    expect(() => filterDirector(null).toThrow(TypeError));
+  });
+
+});
+
+describe('devolverá las películas del director Isao Takahata', () => {
+  it('is a function', () => {
+    expect(typeof (filterDirector2)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => filterDirector2(undefined).toThrow(TypeError));
+    expect(() => filterDirector2(null).toThrow(TypeError));
+  });
+
+});
+
+describe('devolverá el % de películas realizadas por el director especificado', () => {
+  it('is a function', () => {
+    expect(typeof (percentDir)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => percentDir(undefined).toThrow(TypeError));
+    expect(() => percentDir(null).toThrow(TypeError));
+  });
+});
