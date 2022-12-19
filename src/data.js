@@ -7,11 +7,11 @@ export const ordenarDataDes = (dataGhibli) => {
 }
 
  //orden ascendente 1986
- export const ordenarDataAs = (dataGhibli) => {
+  export const ordenarDataAs = (dataGhibli) => {
   const orderDateAs = dataGhibli.sort((a, b) => a.release_date - b.release_date);
 
   return orderDateAs;
- }
+}
 
 
 //FUNCION FILTRAR
