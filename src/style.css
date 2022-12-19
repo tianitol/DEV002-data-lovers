@@ -51,6 +51,30 @@ body{
     scroll-behavior: smooth;    
 }
 
+.barraTextPorcentaje {
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgb(141, 116, 137);
+    position: fixed;
+    top: 9rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem 2rem;
+    max-width: 100%;
+    min-width: 300px;
+}
+
+#calculo {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Didact Gothic', sans-serif; 
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+    text-align: center;
+}
+
 /* AQUI COMIENZA LA BARRA DE MENUS DESPLEGABLES */
 
 .menuBar{
@@ -62,10 +86,10 @@ body{
     width: 100%;
     height: 3rem;
     position: fixed;
-    top: 9rem;
+    top: 11.5rem;
     z-index: 2;
     max-width: 100%;
-    min-width: 400px;
+    min-width: 300px;
     font-size: 1.15rem;
     font-family: 'Inter', sans-serif;
 }
@@ -74,7 +98,7 @@ body{
     width: 100%;
     height: 100%;
     max-width: 100%;
-    min-width: 400px;
+    min-width: 300px;
     display: block;
     margin: auto;
     justify-content: space-around;
@@ -83,63 +107,73 @@ body{
 
 
 
-ul, ol {
+ul {
     list-style: none;
-    width: 50%;
+    width: 40%;
     text-align: center;
     justify-content: space-between;   
 }
 
 /* todos los a que esten en un li dentro de la barra de menu*/
-.nav li a {
+.nav li {
     background-color: #d9d9d9;
     color: #69696c;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 0;
     display: block;
+    height: 50%;
+    max-width: 100%;
+    min-width: 50%;
 }
 
-.nav li a:hover{
+.nav li:hover{
     background-color:#134573;
     opacity: 90%;
     color: #fff;
+    z-index: 2;
 }
 
 /* todas las li dentro de nav*/
 .nav > li{
     float: left;
-    width: 50%;
+    /* width: 40%; */
 }
 
 /* todas las ul dentro de li que esten dentro de nav*/
 .nav li ul {
     display: none;
     position: absolute;
-    width: 25%;
+    /* width: 35%; */
 }
 
 .nav li:hover > ul{
     display: block;
+    z-index: 2;
 }
 
 .nav li ul li {
     position: relative;
+    /* width: 70%; */
 }
 
 .nav li ul li ul {
-    right: -25%;
+    right: -40%;
     top: 0%;
 }
 
 .menu1{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    width: 25%;
+    height: 3rem;
 }
 .menu2{
-    font-size: 1rem;
+    font-size: 0.9rem;
+    width: 40%;
+    margin: 0.2rem 0;
 }
 .menu3{
-    width: 9rem;
-    font-size: 1rem;
+    width: 100%;
+    font-size: 0.7rem;
 }
 
 /* AQUI TERMINA LA BARRA DE MENUS DESPLEGABLES */
@@ -160,6 +194,7 @@ ul, ol {
 .carta {
     padding: 1.5rem;
     margin: 1rem;
+    width: 100%;
     background-color: #fcfbfb;
     color: grey;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
@@ -221,6 +256,7 @@ img {
  /* PARRAFO TEXTO "AÑO" */
 
 .text {
+    font-family: 'Didact Gothic', sans-serif; 
     max-width: 50rem;
     max-height: 30rem;
     font-size: 1.1rem;
@@ -261,7 +297,7 @@ img {
 /* FOOTER */
 .footer {
     width: 100%;
-    height: 4rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,15 +309,7 @@ img {
     
 }
 
-#calculo {
-    background-color: #134573;
-    color: #fff;
-    font-size: 1.1rem;
-    font-family: 'Didact Gothic', sans-serif; 
-    letter-spacing: 0.5px;
-    word-spacing: 3px;
-    text-align: justify;
-}
+
 
 /* AQUI TERMINA EL FOOTER */
 
@@ -341,6 +369,17 @@ img {
         min-width: 100%;
         max-width: 100%;
         transform: translate(0, -8rem);
+    }
+
+    .barraTextPorcentaje {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .menu3 {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
     }
 } 
 
