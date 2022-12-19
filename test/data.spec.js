@@ -1,4 +1,4 @@
-import { filterDirector, ordenarDataDes, ordenarDataAs, percentDir } from '../src/data.js';
+import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2, percentDir } from '../src/data.js';
 
 
 const data =
@@ -51,6 +51,14 @@ describe('ordenarDataDes ordenara las peliculas por año descendente', () => {
     expect(typeof (ordenarDataDes)).toBe('function');
   });
 
+  it('Deberia devolver las películas por año en des', () => {
+    let filmsDes = ordenarDataDes(data);
+    expect(filmsDes[0].release_date).toEqual('1991');
+    expect(filmsDes[1].release_date).toEqual('1989');
+    expect(filmsDes[2].release_date).toEqual('1988');
+    expect(filmsDes[3].release_date).toEqual('1988');
+    expect(filmsDes[4].release_date).toEqual('1986');
+  });
 
   // it('retornara nuevo array sin el elemento "1988"', () => {
   //   expect(filter).toContain(["1991","1989","1986"]);
@@ -82,9 +90,45 @@ describe('ordenarDataDes ordenara las peliculas por año descendente', () => {
 });
 
 
+describe('ordenarDataAs ordenará las peliculas por año ascendente', () => {
+  it('is a function', () => {
+    expect(typeof (ordenarDataAs)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => ordenarDataAs(undefined).toThrow(TypeError));
+    expect(() => ordenarDataAs(null).toThrow(TypeError));
+  });
+
+});
+
+
+describe('devolverá las películas del director Hayao Miyazaki', () => {
+  it('is a function', () => {
+    expect(typeof (filterDirector)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => filterDirector(undefined).toThrow(TypeError));
+    expect(() => filterDirector(null).toThrow(TypeError));
+  });
+
+});
+
+describe('devolverá las películas del director Isao Takahata', () => {
+  it('is a function', () => {
+    expect(typeof (filterDirector2)).toBe('function');
+  });
+
+  it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {
+    expect(() => filterDirector2(undefined).toThrow(TypeError));
+    expect(() => filterDirector2(null).toThrow(TypeError));
+  });
+});
+
 //TEST N1.2 ORDENAR DATA ASC
 
-describe('ordenara las peliculas por año ascendente', () => {
+describe('ordenarDataAs ordenará las peliculas por año ascendente', () => {
   it('is a function', () => {
     expect(typeof (ordenarDataAs)).toBe('function');
   });
@@ -139,5 +183,4 @@ describe('calculara el porcentaje de aportes por director', () => {
     expect(() => percentDir(undefined).toThrow(TypeError));
     expect(() => percentDir(null).toThrow(TypeError));
   });
-
 });
