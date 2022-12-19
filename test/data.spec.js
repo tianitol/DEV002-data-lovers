@@ -44,7 +44,8 @@ const data =
 
 console.log(data);
 
-//TEST N1.1 ORDENAR DATA DESC
+
+//TEST N1.1 ORDENAR PELICULAS DESCENDENTE
 
 describe('ordenarDataDes ordenará las peliculas por año descendente', () => {
   it('is a function', () => {
@@ -67,14 +68,14 @@ describe('ordenarDataDes ordenará las peliculas por año descendente', () => {
 
 });
 
-//TEST N1.2 ORDENAR DATA ASC
+//TEST N1.2 ORDENAR PELICULAS ASCENDENTE
 
 describe('ordenarDataAs ordenará las peliculas por año ascendente', () => {
   it('is a function', () => {
     expect(typeof (ordenarDataAs)).toBe('function');
   });
 
-  it('Deberia devolver las películas por año en as', () => {
+  it('Deberia devolver las películas por año en des', () => {
     let filmsAs = ordenarDataAs(data.films);
     expect(filmsAs[0].release_date).toEqual('1986');
     expect(filmsAs[1].release_date).toEqual('1988');
