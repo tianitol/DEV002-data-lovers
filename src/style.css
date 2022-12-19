@@ -90,6 +90,7 @@ ul, ol {
     justify-content: space-between;   
 }
 
+/* todos los a que esten en un li dentro de la barra de menu*/
 .nav li a {
     background-color: #d9d9d9;
     color: #69696c;
@@ -103,11 +104,14 @@ ul, ol {
     opacity: 90%;
     color: #fff;
 }
+
+/* todas las li dentro de nav*/
 .nav > li{
     float: left;
     width: 50%;
 }
 
+/* todas las ul dentro de li que esten dentro de nav*/
 .nav li ul {
     display: none;
     position: absolute;
@@ -282,7 +286,7 @@ img {
 
 /* AQUI TERMINA EL FOOTER */
 
-
+/* AQUI COMIENZA EL RESPONSIVE*/
 
 @media screen and (max-width: 1068px) {
     .carta {
