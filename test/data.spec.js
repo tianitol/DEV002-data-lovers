@@ -40,13 +40,13 @@ const data =
       "release_date": "1991",
     }
   ]
-}
+};
 
 console.log(data);
 
 //TEST N1.1 ORDENAR DATA DESC
 
-describe('ordenarDataDes ordenará las peliculas por año descendente', () => {
+describe('ordenarDataDes ordenara las peliculas por año descendente', () => {
   it('is a function', () => {
     expect(typeof (ordenarDataDes)).toBe('function');
   });
@@ -61,14 +61,25 @@ describe('ordenarDataDes ordenará las peliculas por año descendente', () => {
   });
 
   // it('retornara nuevo array sin el elemento "1988"', () => {
-
   //   expect(filter).toContain(["1991","1989","1986"]);
   // });
 
   // it('retornara "1991" como primer elemento', () => {
   //   const primerElemento = ordenarDataDes(data.release_date);
-  //   expect(primerElemento).tobe("1991");
+  //   expect(primerElemento()).toEqual({ "release_date": "1991"});
 
+  // });
+
+  // it('el array se reordenara de forma descendente', () => {
+  //   const dataAños = ['1986','1988','1989','1988','1991'];
+  //   const primerElemento = ordenarDataDes(dataAños); 
+  //   expect(primerElemento).toEqual(['1991','1989','1988','1988','1986']);
+  // });
+
+  // it('el array se reordenara de forma descendente', () => {
+  //   const dataAños = data.films.release_date;
+  //   const primerElemento = ordenarDataDes(b.dataAños - a.dataAños);
+  //   expect(primerElemento).toEqual( dataAños ('1991','1989','1988','1988','1986'));
   // });
 
   it('mostrara un TypeError cuando se invoque con un tipo de argumento erroneo', () => {

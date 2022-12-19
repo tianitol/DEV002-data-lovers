@@ -26,8 +26,8 @@ const displayCard = (dataGhibli) => {
 
 
 //displayCard(peliculas); // entregamos el argumento, para filtrar u ordenar le paso la data a displaycard para recorrer y mostrar
- displayCard(peliculas)
- document.getElementById("calculo").innerHTML = " Estudio Ghibli ha realizado 20 peliculas entre los años 1986 y 2014 ";
+displayCard(peliculas)
+document.getElementById("calculo").innerHTML = " Estudio Ghibli ha realizado 20 peliculas entre los años 1986 y 2014 ";
 
 
 // FUNCION ORDENAR
@@ -53,8 +53,8 @@ document.getElementById("haMi").addEventListener("click", (e) => {
     console.log("hizo click!")
     const resultFilterDir = filterDirector(peliculas);
     displayCard(resultFilterDir);
-    
-    document.getElementById("calculo").innerHTML = "Este director a realizado "+ resultFilterDir.length + " peliculas, lo que equivale a " + percentDir((resultFilterDir.length),20) + " % de las peliculas del estudio";
+
+    document.getElementById("calculo").innerHTML = "Este director a realizado " + resultFilterDir.length + " peliculas, lo que equivale a " + percentDir((resultFilterDir.length), 20) + " % de las peliculas del estudio";
 
 })
 
@@ -64,7 +64,7 @@ document.getElementById("isTa").addEventListener("click", (e) => {
     const resultFilterDir2 = filterDirector2(peliculas);
     displayCard(filterDirector2(peliculas));
 
-    document.getElementById("calculo").innerHTML = "Este director a realizado "+ resultFilterDir2.length + " peliculas, lo que equivale a " + percentDir((resultFilterDir2.length),20) + " % de las peliculas del estudio";
+    document.getElementById("calculo").innerHTML = "Este director a realizado " + resultFilterDir2.length + " peliculas, lo que equivale a " + percentDir((resultFilterDir2.length), 20) + " % de las peliculas del estudio";
 })
 
 
