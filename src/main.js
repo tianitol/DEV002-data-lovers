@@ -36,6 +36,7 @@ document.getElementById("desc").addEventListener("click", (e) => {
 
     displayCard(ordenarDataDes(peliculas));
     // document.getElementById("calculo").innerHTML = "Este director a realizado "
+    document.getElementById("calculo").innerHTML = " ";
 })
 
 document.getElementById("asc").addEventListener("click", (e) => {
@@ -43,6 +44,7 @@ document.getElementById("asc").addEventListener("click", (e) => {
 
     displayCard(ordenarDataAs(peliculas));
     // document.getElementById("calculo").innerHTML = "Este director a realizado "
+    document.getElementById("calculo").innerHTML = " ";
 })
 
 
