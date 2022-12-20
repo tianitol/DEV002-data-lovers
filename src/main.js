@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2, percentDir } from './data.js';
+import { ordenarDataDes, ordenarDataAs, filterDirector, filterDirector2, filterDirector3, filterDirector4, filterDirector5, filterDirector6, percentDir } from './data.js';
 
 const peliculas = data.films;
 const containerGhibli = document.getElementById("root");
@@ -58,6 +58,7 @@ document.getElementById("haMi").addEventListener("click", (e) => {
 
 })
 
+//DIR 2
 document.getElementById("isTa").addEventListener("click", (e) => {
     e.preventDefault();
     console.log("hizo click!")
@@ -67,40 +68,50 @@ document.getElementById("isTa").addEventListener("click", (e) => {
     document.getElementById("calculo").innerHTML = "I. Takahata has made " + resultFilterDir2.length + " films, this is " + percentDir((resultFilterDir2.length), 20) + " % Studio Ghibli's works";
 })
 
+//DIR 3
+document.getElementById("yoKo").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    const resultFilterDir3 = filterDirector3(peliculas);
+    displayCard(filterDirector3(peliculas));
+
+    document.getElementById("calculo").innerHTML = "Y. Kondō has made " + resultFilterDir3.length + " films, this is " + percentDir((resultFilterDir3.length), 20) + " % Studio Ghibli's works";
+})
+
+
+//DIR 4
+document.getElementById("hiMo").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    const resultFilterDir4 = filterDirector4(peliculas);
+    displayCard(filterDirector4(peliculas));
+
+    document.getElementById("calculo").innerHTML = "H. Morita has made " + resultFilterDir4.length + " films, this is " + percentDir((resultFilterDir4.length), 20) + " % Studio Ghibli's works";
+})
+
+//DIR 5
+
+document.getElementById("goMi").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    const resultFilterDir5 = filterDirector5(peliculas);
+    displayCard(filterDirector5(peliculas));
+
+    document.getElementById("calculo").innerHTML = "G. Miyazaki has made " + resultFilterDir5.length + " films, this is " + percentDir((resultFilterDir5.length), 20) + " % Studio Ghibli's works";
+})
+
+
+// DIR 6
+
+document.getElementById("hiYo").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hizo click!")
+    const resultFilterDir6 = filterDirector6(peliculas);
+    displayCard(filterDirector6(peliculas));
+
+    document.getElementById("calculo").innerHTML = "H. Yonebayashi has made " + resultFilterDir6.length + " films, this is " + percentDir((resultFilterDir6.length), 20) + " % Studio Ghibli's works";
+});
 
 
 
 
-
-
-
-
-
-
-
-
-
-//INTENTO  DE CALCULO NUEVO ARRAY CON HAMI
-// const nuevoArrayDir = peliculas.map(x => x.Director)
-// const arrayHami = filterDirector(nuevoArrayDir)
-// console.log(nuevoArrayDir)
-
-//INTENTO 2  DE CALCULO NUEVO ARRAY CON HAMI
-
-// const nuevoArrayDir (Array) {
-//     let counter = 0;
-
-//     for(let i = 0; i < peliculas.length; i++) {
-//         if (peliculas[i] == "Hayao Miyazaki"){
-//             counter += [i];
-//         }
-//     }
-//     return counter;
-// }
-
-//INTENTO 3  DE CALCULO NUEVO ARRAY CON HAMI
-
-// const arrayHami = filterDirector
-// arrayHami.map(x => x){
-//     const 
-// }

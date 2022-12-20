@@ -27,7 +27,30 @@ export const filterDirector2 = (dataDirector) => {
   return orderByDirector2;
 } 
 
+export const filterDirector3 = (dataDirector) => {
+  const orderByDirector3 = dataDirector.filter(pelicula => pelicula.director == "Yoshifumi Kondō");
+  return orderByDirector3;
+} 
 
+export const filterDirector4 = (dataDirector) => {
+  const orderByDirector4 = dataDirector.filter(pelicula => pelicula.director == "Hiroyuki Morita");
+  return orderByDirector4;
+} 
+
+export const filterDirector5 = (dataDirector) => {
+  const orderByDirector5 = dataDirector.filter(pelicula => pelicula.director == "Gorō Miyazaki");
+  return orderByDirector5;
+} 
+
+export const filterDirector6 = (dataDirector) => {
+  const orderByDirector6 = dataDirector.filter(pelicula => pelicula.director == "Hiromasa Yonebayashi");
+  return orderByDirector6;
+} 
+
+
+
+
+//FUNCION CALCULO ADICIONAL
 
 export const percentDir = (a,b) => {
   const percentMo = (a/b)*100;
@@ -37,13 +60,6 @@ export const percentDir = (a,b) => {
 
 
 
-//FUNCION CALCULAR 
-
-
-//   export const aportesHaMi = (HaMiFilms) => {
-//   const porcePeli = 
-//    return porcePeli;
-//  }
 
 
 
