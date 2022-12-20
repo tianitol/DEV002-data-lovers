@@ -110,7 +110,7 @@ La primera idea presentada se adjunta en un sketch a papel, la cual fue iterada 
 
 Una vez conformes con el prototipo propuesto se procedió a realizar el prototipo de alta para la HU1 (desplegar las películas -información + imagen- en cartas alargadas de forma horizontal)
 
-### Prototipo de baja fidelidad
+### Prototipo de alta fidelidad
 
 ![prototipo-alta-1](/src/protoAlta1.png)
 
